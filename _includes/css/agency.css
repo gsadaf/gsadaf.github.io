@@ -217,12 +217,15 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a {
     text-transform: uppercase;
     font-family: {{ site.data.template.font.secondary }};
-    font-weight: 600;
     letter-spacing: 1px;
     color: #000;
     -webkit-transition: all ease .35s;
     -moz-transition: all ease .35s;
     transition: all ease .35s;
+	font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.5em;
 }
 
 .navbar-default .nav li a:hover,
@@ -905,7 +908,8 @@ body {
     border-width: 1px 1px 1px 1px;
     border-radius: 50px;
 	background-color: #FFFFFF;
-	max-width: 250px;
+	max-width: 249px;
+	height:39px;
 }
 .search-content__form input{
 	border:none;
