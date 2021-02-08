@@ -307,10 +307,10 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 30px;
-	text-align:left;
+	text-align:center;
 	color: #3F8576;
 }
 
@@ -1021,4 +1021,7 @@ header .btn {
 }
 .posts_grid .col-md-4:first-child{
 	display:none;
+}
+.navbar {
+    padding-bottom: 15px;
 }
