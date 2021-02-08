@@ -303,7 +303,7 @@ header .intro-text .intro-lead-in {
     line-height: 22px;
 	color: #17607D;
 	text-shadow: 0px 7px 5px rgb(142 132 132 / 30%);
-	font-weight:900;
+	font-weight:600;
 }
 
 header .intro-text .intro-heading {
@@ -336,7 +336,7 @@ header .intro-text .intro-heading {
 		letter-spacing: 0px;
 		color: #17607D;
 		text-shadow: 0px 7px 5px rgb(142 132 132 / 30%);
-		font-weight:900;
+		font-weight:600;
 		font-size: 3.3125em;
 		line-height: 1.2;
 		margin-bottom: .4em;
