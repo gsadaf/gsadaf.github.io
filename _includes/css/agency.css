@@ -346,7 +346,7 @@ header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: capitalize;
         font-family: {{ site.data.template.font.primary }};
-        font-size: 100%;
+        font-size: 16px;
 		line-height: 1.5;
 		letter-spacing: 0px;
 		text-align:left;
