@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">{{site.title}}</a>
+                <a class="navbar-brand page-scroll" href="#page-top">{% include search_form.html %}</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,19 +19,19 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#">HOME</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#">EVENTS</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#">BLOG</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Team</a>
+                        <a class="page-scroll" href="#">RESOURCES</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                    <li class="goarrow">
+                        <a class="page-scroll" href="#">MERL TECH <img src="img/long-arrow-alt-up-solid.svg"></i></a>
                     </li>
                 </ul>
             </div>
@@ -41,13 +41,22 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header style="background-image: url({{ page.banner.backgroun_image }});">
         <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Our Studio!</div>
-                <div class="intro-heading">It's Nice To Meet You</div>
-                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
-            </div>
+			<div class="row">
+                <div class="col-md-6">
+					<div class="intro-text">
+						<div class="intro-lead-in">{{ page.banner.banner_title }}</div>
+						<div class="intro-heading">{{ page.banner.banner_text }}</div>
+						<a href="#services" class="page-scroll btn btn-xl">{{ page.banner.button_text }}</a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="intro-text banner_image">
+						<img src="{{ page.banner.image }}" class="img-responsive img-centered" />
+					</div>
+				</div>
+			</div>
         </div>
     </header>
 <!--

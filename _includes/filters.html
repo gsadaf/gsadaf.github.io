@@ -1,0 +1,50 @@
+<!-- Services Section -->
+    <section id="filters">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Filters <i class="fa fa-chevron-down"></i></h2>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-md-4">
+                    <h4 class="service-heading">Content Type <span class="filter_actions"> All | None</span></h4>
+                    <div class="control-group form-group">
+                        <input type="checkbox" class="form-control" id="case-studies" required="" aria-invalid="false"> Case Studies
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group form-group">
+                        <input type="checkbox" class="form-control" id="beginner-guides" required="" aria-invalid="false"> Beginner's Guides
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group form-group">
+                        <input type="checkbox" class="form-control" id="project-bank" required="" aria-invalid="false"> Project Bank
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="service-heading">MERL Technology Workflow <span class="filter_actions"> All | None</span></h4>
+                    <div class="control-group form-group">
+                        <input type="checkbox" class="form-control" id="data-collection" required="" aria-invalid="false"> Data Collection and Management
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group form-group">
+                        <input type="checkbox" class="form-control" id="data-analysis" required="" aria-invalid="false"> Data Analysis and Visualization
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group form-group">
+                        <input type="checkbox" class="form-control" id="project-bank" required="" aria-invalid="false"> Reporting
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    {% include search_form.html %}
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-md-12">
+            		<button class="page-scroll btn btn-xl">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>

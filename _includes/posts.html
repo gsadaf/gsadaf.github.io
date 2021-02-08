@@ -1,0 +1,35 @@
+<!-- Services Section -->
+<section id="posts">
+    <div class="container">
+    {% if paginator %}
+          {% assign posts = paginator.posts %}
+        {% else %}
+          {% assign posts = site.posts %}
+        {% endif %}
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="section-heading">Results ({{ posts.size }})</h3>
+            </div>
+        </div>
+        
+        
+        {% assign entries_layout = page.entries_layout | default: 'list' %}
+        <div class="posts_grid entries-{{ entries_layout }}">
+        <div class="row">
+          {% for post in posts %}
+            <div class="col-md-4 col-sm-6">
+            <div class="post-item">
+                <a href="#">
+                    <h4>{{ post.title }}</h4>
+                    <img src="img/posts/{{ post.thumbnail }}" class="img-responsive img-centered" alt="">
+                </a>
+                <p>{{ post.description | truncatewords: 5 }}</p>
+                <a href="#" class="readmore">Read more</a>
+                <p class="text-category {{ post.category.slug }}">{{ post.category.title }}</p>
+            </div>
+            </div>
+        {% endfor %}
+        </div>
+        </div>
+        </div>
+</section>
