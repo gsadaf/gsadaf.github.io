@@ -335,7 +335,7 @@ header .intro-text .intro-heading {
 
     header .intro-text .intro-heading {
         margin-bottom: 50px;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-family: {{ site.data.template.font.primary }};
         font-size: 15px;
         line-height: 5px;
