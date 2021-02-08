@@ -216,7 +216,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: {{ site.data.template.font.secondary }};
+    font-family: "Poppins", Sans-serif;
     letter-spacing: 1px;
     color: #000;
     -webkit-transition: all ease .35s;
