@@ -922,9 +922,10 @@ body {
     border: none;
     color: #666;
 	font-size: 14px;
-    padding-left: 5px;
-	font-weight:normal;
-	max-width: 178px;
+    padding-left: 10px;
+    font-weight: normal;
+    max-width: 178px;
+    float: right;
 }
 .goarrow img {
     transform: rotate(
