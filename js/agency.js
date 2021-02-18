@@ -20,15 +20,20 @@ $(function() {
 		$(this).parent().parent().parent().find('input:checkbox').not(this).prop('checked', false);
     });
 	$(".applyCatsfilter").click(function(){
-		$("#posts_grid_inner").show();
+		$(".posts_grid_inner").hide();
 		$.each($("#filters input[type='checkbox']:checked"), function(){
 			var catId = $(this).attr("id");
-			$.each($("#posts_grid_inner"), function(){
-				if($(this).attr("data-cat") != catId){
-					$(this).hide();
-				}
-			});
+			console.log(catId);
+			//$.each($(".posts_grid_inner"), function(){
+				console.log('[data-cat="'+catId+'"]');
+				//if($('[data-cat=""]') != catId){
+					$('.posts_grid_inner[data-cat="'+catId+'"]').show(1000);
+				//}
+			//});
         });
+		$('html, body').animate({
+        scrollTop: $(".posts_grid").offset().top
+    }, 2000);
 	});
 });
 
