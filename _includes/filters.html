@@ -9,18 +9,14 @@
             <div class="row">
 				<div class="col-md-4">
                     <h4 class="service-heading">Content Type <span class="filter_actions"> <span class="all">All</span> | <span class="none">None</span></h4>
-                    <div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="case-studies" required="" aria-invalid="false"> Case Studies
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="beginner-guides" required="" aria-invalid="false"> Beginner's Guides
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="project-bank" required="" aria-invalid="false"> Project Bank
-                        <p class="help-block text-danger"></p>
-                    </div>
+					{% assign categories = site.categories | sort %}
+					{% for category in categories %}
+					    {% assign cat = category | first %}
+					    <div class="control-group form-group">
+							<input type="checkbox" class="form-control" id="{{ cat.slug }}" required="" aria-invalid="false"> {{ cat.title }}
+							<p class="help-block text-danger"></p>
+					    </div>
+					{% endfor %}
                 </div>
                 <div class="col-md-4">
                     <h4 class="service-heading">MERL Technology Workflow <span class="filter_actions"> <span class="all">All</span> | <span class="none">None</span></h4>
@@ -43,7 +39,7 @@
             </div>
             <div class="row">
             	<div class="col-md-12">
-            		<button class="page-scroll btn btn-xl">Apply Filters</button>
+            		<button class="page-scroll btn btn-xl applyCatsfilter">Apply Filters</button>
                 </div>
             </div>
         </div>
