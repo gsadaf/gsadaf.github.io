@@ -19,6 +19,17 @@ $(function() {
 	$(".filter_actions span.none").click(function(){
 		$(this).parent().parent().parent().find('input:checkbox').not(this).prop('checked', false);
     });
+	$(".applyCatsfilter").click(function(){
+		$("#posts_grid_inner").show();
+		$.each($("#filters input[type='checkbox']:checked"), function(){
+			var catId = $(this).attr("id");
+			$.each($("#posts_grid_inner"), function(){
+				if($(this).attr("data-cat") != catId){
+					$(this).hide();
+				}
+			});
+        });
+	});
 });
 
 // Highlight the top nav as scrolling occurs

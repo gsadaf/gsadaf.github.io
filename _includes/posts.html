@@ -17,7 +17,7 @@
         <div class="posts_grid entries-{{ entries_layout }}">
         <div class="row">
           {% for post in posts %}
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6 posts_grid_inner" data-cat="{{ post.category.slug }}">
             <div class="post-item">
                 <a href="#">
                     <h4>{{ post.title }}</h4>
