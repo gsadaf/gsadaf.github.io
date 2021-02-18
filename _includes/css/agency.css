@@ -1032,3 +1032,6 @@ header .btn {
 .navbar {
     padding-bottom: 15px;
 }
+.filter_actions span{
+	cursor:pointer;
+}

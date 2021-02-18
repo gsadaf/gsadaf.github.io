@@ -13,6 +13,12 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+	$(".filter_actions span.all").click(function(){
+		$(this).parent().parent().parent().find('input:checkbox').not(this).prop('checked', true);
+    });
+	$(".filter_actions span.none").click(function(){
+		$(this).parent().parent().parent().find('input:checkbox').not(this).prop('checked', false);
+    });
 });
 
 // Highlight the top nav as scrolling occurs
