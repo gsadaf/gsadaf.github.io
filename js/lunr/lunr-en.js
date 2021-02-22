@@ -21,7 +21,6 @@ var idx = lunr(function () {
     })
   }
 });
-console.log(store);
 $(document).ready(function() {
   $('input#search').on('keyup', function () {
     var resultdiv = $('#results');
