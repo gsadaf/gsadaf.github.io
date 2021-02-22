@@ -3,17 +3,25 @@ layout: none
 ---
 
 var store = [
-  {%- for c in site.collections -%}
+  /*{%- for c in site.collections -%}
     {%- if forloop.last -%}
       {%- assign l = true -%}
     {%- endif -%}
-    {%- assign docs = c.docs | where_exp:'doc','doc.search != false' -%}
-    {%- for doc in docs -%}
-      {%- if doc.header.teaser -%}
+    {%- assign docs = c.docs | where_exp:'doc','doc.search != false' -%}*/
+	{% if paginator %}
+          {% assign posts = paginator.posts %}
+        {% else %}
+          {% assign posts = site.posts %}
+        {% endif %}
+    {%- for doc in posts -%}
+	{%- if forloop.last -%}
+      {%- assign l = true -%}
+    {%- endif -%}
+      /*{%- if doc.header.teaser -%}
         {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture -%}
       {%- else -%}
         {%- assign teaser = site.teaser -%}
-      {%- endif -%}
+      {%- endif -%}*/
       {
         "title": {{ doc.title | jsonify }},
         "excerpt":
@@ -40,10 +48,11 @@ var store = [
               replace:"</h6>", " "|
             strip_html | strip_newlines | truncatewords: 50 | jsonify }},
           {%- endif -%}
-        "categories": {{ doc.categories | jsonify }},
+        "categories": {{ doc.category.title | jsonify }},
         "tags": {{ doc.tags | jsonify }},
         "url": {{ doc.url | absolute_url | jsonify }},
         "teaser": {{ teaser | absolute_url | jsonify }}
       }{%- unless forloop.last and l -%},{%- endunless -%}
-    {%- endfor -%}
-  {%- endfor -%}]
+    {%- endfor -%}];
+	//console.log(store);
+  /*{%- endfor -%}*/
