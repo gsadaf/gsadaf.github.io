@@ -2,7 +2,7 @@
 <section id="posts">
     <div class="container">
     {% if paginator %}
-          {% assign posts = paginator.posts %}
+          {% assign posts = site.posts %}
         {% else %}
           {% assign posts = site.posts %}
         {% endif %}

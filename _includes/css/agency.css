@@ -1027,7 +1027,7 @@ header .btn {
     color: #fff;
 }
 .posts_grid .col-md-4:first-child{
-	display:none;
+	/*display:none;*/
 }
 .navbar {
     padding-bottom: 15px;
