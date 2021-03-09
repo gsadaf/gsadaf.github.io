@@ -1,14 +1,12 @@
 ---
-title: Database management
+title: Project 2
 layout: posts
 date: '2021-02-24'
 img: dreams.png
 description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo
   novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo
   diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
-content-type: Case study
-merl-technology-workflow: Data Collection and Management
-tags:
-- Database-management
+content-type: "(Beginner's) Guide"
+merl-technology-workflow: Data Integration
 ---
 

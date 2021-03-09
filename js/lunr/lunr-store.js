@@ -48,7 +48,8 @@ var store = [
               replace:"</h6>", " "|
             strip_html | strip_newlines | truncatewords: 50 | jsonify }},
           {%- endif -%}
-        "categories": {{ doc.category.title | jsonify }},
+        "contenttype": {{ doc.content-type | jsonify }},
+		"merltechnologyworkflow": {{ doc.merl-technology-workflow | jsonify }},
         "tags": {{ doc.tags | jsonify }},
         "url": {{ doc.url | absolute_url | jsonify }},
         "teaser": {{ teaser | absolute_url | jsonify }}

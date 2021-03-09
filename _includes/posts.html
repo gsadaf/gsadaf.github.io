@@ -17,7 +17,7 @@
         <div class="posts_grid entries-{{ entries_layout }}">
         <div class="row">
           {% for post in posts %}
-            <div class="col-md-4 col-sm-6 posts_grid_inner" data-cat="{{ post.category.slug }}">
+            <div class="col-md-4 col-sm-6 posts_grid_inner" data-title="{{ post.title }}" data-content-type="{{ post.content-type }}" data-merl-technology-workflow="{{ post.merl-technology-workflow }}">
             <div class="post-item">
                 <a href="#">
                     <h4>{{ post.title }}</h4>
@@ -25,7 +25,7 @@
                 </a>
                 <p>{{ post.description | truncatewords: 5 }}</p>
                 <a href="#" class="readmore">Read more</a>
-                <p class="text-category {{ post.category.slug }}">{{ post.category.title }}</p>
+                <p class="text-category">{{ post.content-type }}</p>
             </div>
             </div>
         {% endfor %}

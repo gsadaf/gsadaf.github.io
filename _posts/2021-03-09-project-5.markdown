@@ -1,19 +1,11 @@
 ---
-title: Golden
-subtitle: Website Design
+title: Project 5
 layout: posts
-modal-id: 3
-date: '2014-07-16'
-img: golden.png
-thumbnail: golden-thumbnail.png
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category:
-  title: Case Studies
-  slug: case-studies
+date: '2021-02-24'
+img: dreams.png
 description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo
   novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo
   diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+content-type: "Case study"
+merl-technology-workflow: Project Evaluation
 ---
-

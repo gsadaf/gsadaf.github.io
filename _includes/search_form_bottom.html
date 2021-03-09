@@ -2,12 +2,12 @@
 {%- assign search_provider = site.search_provider | default: "lunr" -%}
   {%- case search_provider -%}{{ search_provider }}
   {%- when "lunr" -%}
-  <form class="search-content__form" onkeydown="return event.key != 'Enter';">
+  <form class="search-content__form">
   <span class="bdt-icon bdt-search-icon" bdt-search-icon=""><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="search-icon"><circle fill="none" stroke="#666" stroke-width="1.1" cx="9" cy="9" r="7"></circle><path fill="none" stroke="#666" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path></svg></span>
     <label class="sr-only" for="search">
       {{ site.data.ui-text[site.locale].search_label_text | default: 'Type to Search1...' }}
     </label>
-    <input type="search" id="search_b" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Type to Search...' }}" />
+    <input type="search" id="search_input" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Type to Search...' }}" />
   </form>
   {%- endcase -%}
 </div>

@@ -7,41 +7,44 @@
                 </div>
             </div>
             <div class="row">
+  {% for category in site.categories %}
+    {{ category }}
+  {% endfor %}
 				<div class="col-md-4">
                     <h4 class="service-heading">Content Type <span class="filter_actions"> <span class="all">All</span> | <span class="none">None</span></h4>
 					<div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="case-studies" required="" aria-invalid="false"> Case Studies
+                        <input type="checkbox" class="form-control" id="case-studies" required="" aria-invalid="false" value="Case study"> Case Studies
                         <p class="help-block text-danger"></p>
                     </div>
 					<div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="beginner-guides" required="" aria-invalid="false"> Beginner's Guides
+                        <input type="checkbox" class="form-control" id="beginner-guides" required="" aria-invalid="false" value="Beginner's Guides"> Beginner's Guides
                         <p class="help-block text-danger"></p>
                     </div>
 					<div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="project-bank" required="" aria-invalid="false"> Project Bank
+                        <input type="checkbox" class="form-control" id="project-bank" required="" aria-invalid="false" value="Project Bank"> Project Bank
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <h4 class="service-heading">MERL Technology Workflow <span class="filter_actions"> <span class="all">All</span> | <span class="none">None</span></h4>
                     <div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="data-collection" required="" aria-invalid="false"> Data Collection and Management
+                        <input type="checkbox" class="form-control" id="data-collection" required="" aria-invalid="false" value="Data Collection and Management"> Data Collection and Management
                         <p class="help-block text-danger"></p>
                     </div>
 					<div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="data-analysis" required="" aria-invalid="false"> Data Integration
+                        <input type="checkbox" class="form-control" id="data-analysis" required="" aria-invalid="false" value="Data Integration"> Data Integration
                         <p class="help-block text-danger"></p>
                     </div>
 					<div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="data-analysis" required="" aria-invalid="false"> Data Visualization
+                        <input type="checkbox" class="form-control" id="data-analysis" required="" aria-invalid="false" value="Data Visualization"> Data Visualization
                         <p class="help-block text-danger"></p>
                     </div>
                     <div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="project-bank" required="" aria-invalid="false"> Reporting
+                        <input type="checkbox" class="form-control" id="project-bank" required="" aria-invalid="false" value="Reporting"> Reporting
                         <p class="help-block text-danger"></p>
                     </div>
 					 <div class="control-group form-group">
-                        <input type="checkbox" class="form-control" id="project-bank" required="" aria-invalid="false"> Project Evaluation? something about evals or impact assessment
+                        <input type="checkbox" class="form-control" id="project-bank" required="" aria-invalid="false" value="Project Evaluation"> Project Evaluation
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>

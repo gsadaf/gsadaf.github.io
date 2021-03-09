@@ -5,7 +5,8 @@ layout: none
 var idx = lunr(function () {
   this.field('title')
   this.field('excerpt')
-  this.field('categories')
+  this.field('content-type')
+  this.field('merl-technology-workflow')
   this.field('tags')
   this.ref('id')
 
@@ -15,7 +16,8 @@ var idx = lunr(function () {
     this.add({
       title: store[item].title,
       excerpt: store[item].excerpt,
-      categories: store[item].categories,
+      contenttype: store[item].contenttype,
+	  merltechnologyworkflow: store[item].merltechnologyworkflow,
       tags: store[item].tags,
       id: item
     })
@@ -42,7 +44,10 @@ $(document).ready(function() {
     for (var item in result) {
       var ref = result[item].ref;
       if(store[ref].teaser){
-        var searchitem =
+		var get_current = $('.posts_grid_inner[data-title="'+store[ref].title+'"]');
+		$('.posts_grid_inner').not(get_current).hide(500);
+		get_current.show(500);
+       /* var searchitem =
           '<div class="list__item">'+
             '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
               '<h2 class="archive__item-title" itemprop="headline">'+
@@ -53,9 +58,12 @@ $(document).ready(function() {
               '</div>'+
               '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
             '</article>'+
-          '</div>';
+          '</div>';*/
       }
       else{
+		  var get_current = $('.posts_grid_inner[data-title="'+store[ref].title+'"]');
+		$('.posts_grid_inner').not(get_current).hide(500);
+		get_current.show(500);
     	  var searchitem =
           '<div class="list__item">'+
             '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
@@ -66,7 +74,7 @@ $(document).ready(function() {
             '</article>'+
           '</div>';
       }
-      resultdiv.append(searchitem);
+      //resultdiv.append(searchitem);
 	  $('html, body').animate({
         scrollTop: $("#posts").offset().top
     }, 2000);
