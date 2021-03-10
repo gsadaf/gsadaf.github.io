@@ -22,7 +22,7 @@ $(function() {
 	$("#filters input[type='checkbox']").on('change', function(){
 		$.each($("#filters input[type='checkbox']:checked"), function(){
 			var catId = $(this).val();
-			//console.log(catId);
+			
 			//$.each($(".posts_grid_inner"), function(){
 				
 				$('.posts_grid_inner[data-content-type="'+catId+'"]').addClass('active');
@@ -33,15 +33,23 @@ $(function() {
 				else{
 					$('.posts_grid_inner[data-merl-technology-workflow="'+catId+'"]').addClass('active_flow');
 				}
+				    
+
 				//if($('[data-cat=""]') != catId){
 					if($('.posts_grid_inner').hasClass('active') && $('.posts_grid_inner').hasClass('active_flow')){
-						$('.searchOptions').html($('.posts_grid_inner.active.active_flow .tagsPosts').html());
+						if($(".searchOptions:contains("+$('.posts_grid_inner.active.active_flow .tagsPosts').text()+")").length == 0) {
+						$('.searchOptions').append($('.posts_grid_inner.active.active_flow .tagsPosts').html());
+						}
 					}
 					else if($('.posts_grid_inner').hasClass('active')){
-					$('.searchOptions').html($('.posts_grid_inner.active .tagsPosts').html());
+						if($(".searchOptions:contains("+$('.posts_grid_inner.active .tagsPosts').text()+")").length == 0) {
+					$('.searchOptions').append($('.posts_grid_inner.active .tagsPosts').html());
+						}
 					}
 					else if($('.posts_grid_inner').hasClass('active_flow')){
-					$('.searchOptions').html($('.posts_grid_inner.active_flow .tagsPosts').html());
+						if($(".searchOptions:contains("+$('.posts_grid_inner.active_flow .tagsPosts').text()+")").length == 0) {
+					$('.searchOptions').append($('.posts_grid_inner.active_flow .tagsPosts').html());
+						}
 					}
 					//$('.posts_grid_inner').not('.posts_grid_inner.active').hide(500);
 					//$('.posts_grid_inner').not(get_current_m).hide(500);
@@ -53,7 +61,7 @@ $(function() {
 			//});
         });
 		$('.posts_grid_inner').removeClass('active_flow');
-	  $('.posts_grid_inner').removeClass('active');
+	 $('.posts_grid_inner').removeClass('active');
 	});
 	$(".applyCatsfilter").click(function(){
 		//$(".posts_grid_inner").hide();
@@ -240,6 +248,7 @@ $(function() {
 		}
 		$('.posts_grid_inner').removeClass('active_flow');
 	  $('.posts_grid_inner').removeClass('active');
+	  
 		$('html, body').animate({
         scrollTop: $(".posts_grid").offset().top
     }, 2000);
