@@ -496,7 +496,9 @@ $(document).ready(function() {
     for (var item in result) {
       var ref = result[item].ref;
       if(store[ref].teaser){
-        var searchitem =
+		$('.posts_grid_inner').not('.posts_grid_inner[data-title="'+store[ref].title+'"]').hide(500);
+		$('.posts_grid_inner[data-title="'+store[ref].title+'"]').show(500);
+       /* var searchitem =
           '<div class="list__item">'+
             '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
               '<h2 class="archive__item-title" itemprop="headline">'+
@@ -507,10 +509,12 @@ $(document).ready(function() {
               '</div>'+
               '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
             '</article>'+
-          '</div>';
+          '</div>';*/
       }
       else{
-    	  var searchitem =
+		 $('.posts_grid_inner').not('.posts_grid_inner[data-title="'+store[ref].title+'"]').hide(500);
+			  $('.posts_grid_inner[data-title="'+store[ref].title+'"]').show(500);
+    	 /* var searchitem =
           '<div class="list__item">'+
             '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
               '<h2 class="archive__item-title" itemprop="headline">'+
@@ -518,7 +522,7 @@ $(document).ready(function() {
               '</h2>'+
               '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
             '</article>'+
-          '</div>';
+          '</div>';*/
       }
       resultdiv.append(searchitem);
 	  $('html, body').animate({

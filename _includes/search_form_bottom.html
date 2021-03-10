@@ -2,12 +2,16 @@
 {%- assign search_provider = site.search_provider | default: "lunr" -%}
   {%- case search_provider -%}{{ search_provider }}
   {%- when "lunr" -%}
-  <form class="search-content__form">
+  <form class="search-content__form" style="float:left;">
   <span class="bdt-icon bdt-search-icon" bdt-search-icon=""><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="search-icon"><circle fill="none" stroke="#666" stroke-width="1.1" cx="9" cy="9" r="7"></circle><path fill="none" stroke="#666" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path></svg></span>
     <label class="sr-only" for="search">
       {{ site.data.ui-text[site.locale].search_label_text | default: 'Type to Search1...' }}
     </label>
     <input type="search" id="search_input" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Type to Search...' }}" />
-  </form>
+  </form><div class="dropdown" style="float:left; margin-left:5px;">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" style="margin-top:0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <i CLASS="glyphicon glyphicon-info-sign"></i> </button>
+  <ul class="dropdown-menu searchOptions" aria-labelledby="dropdownMenu1"> </ul>
+</div>
   {%- endcase -%}
 </div>

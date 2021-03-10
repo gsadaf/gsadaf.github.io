@@ -1035,3 +1035,6 @@ header .btn {
 .filter_actions span{
 	cursor:pointer;
 }
+.searchOptions{
+	padding:10px 15px;
+}

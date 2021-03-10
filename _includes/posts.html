@@ -26,6 +26,11 @@
                 <p>{{ post.description | truncatewords: 5 }}</p>
                 <a href="#" class="readmore">Read more</a>
                 <p class="text-category">{{ post.content-type }}</p>
+				<div class="tagsPosts" style="display:none;">
+					{% for tags in post.tags %}
+					   <li>{{ tags | replace: "-", " " }}</li>
+				    {% endfor %}
+				</div>
             </div>
             </div>
         {% endfor %}
