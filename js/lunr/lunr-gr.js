@@ -476,7 +476,8 @@ var idx = lunr(function () {
 });
 
 $(document).ready(function() {
-  $('input#search').on('keyup', function () {
+  $('input#search').on('change', function () {
+	  $('.posts_grid_inner').hide(500);
     var resultdiv = $('#results');
     var query = $(this).val().toLowerCase();
     var result =
@@ -492,11 +493,12 @@ $(document).ready(function() {
         })
       });
     resultdiv.empty();
+    if(result.length == 0){
     resultdiv.prepend('<p class="results__found">'+result.length+' {{ site.data.ui-text[site.locale].results_found | default: "Result(s) found" }}</p>');
+	}
     for (var item in result) {
       var ref = result[item].ref;
       if(store[ref].teaser){
-		$('.posts_grid_inner').not('.posts_grid_inner[data-title="'+store[ref].title+'"]').hide(500);
 		$('.posts_grid_inner[data-title="'+store[ref].title+'"]').show(500);
        /* var searchitem =
           '<div class="list__item">'+
@@ -512,7 +514,6 @@ $(document).ready(function() {
           '</div>';*/
       }
       else{
-		 $('.posts_grid_inner').not('.posts_grid_inner[data-title="'+store[ref].title+'"]').hide(500);
 			  $('.posts_grid_inner[data-title="'+store[ref].title+'"]').show(500);
     	 /* var searchitem =
           '<div class="list__item">'+
